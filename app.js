@@ -43,9 +43,21 @@ app.get('/project/:id', function (req, res, next) {
     res.render("project", context);
 });
 
+
+// The following middleware is to prevent GET /favicon.ico
+// Credit to Blair Anderson - (https://stackoverflow.com/questions/35408729/express-js-prevent-get-favicon-ico/35408810)
+app.use((req, res, next) => {
+    if (req.originalUrl === '/favicon.ico') {
+        res.status(204).json({nope: true});
+    } else {
+        next();
+    }
+});
+
 // Every other page
 app.use((req, res, next) => {
     // Creates an error with status 404 if the page wasn't found
+    console.error(req.url);
     const error = new Error("Not found");
     error.status = 404;
     next(error);

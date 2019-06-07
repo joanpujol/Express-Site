@@ -57,7 +57,7 @@ app.use((req, res, next) => {
 // Every other page
 app.use((req, res, next) => {
     // Creates an error with status 404 if the page wasn't found
-    console.error(req.url);
+    console.error(`The following page has not been found: ${req.url}`);
     const error = new Error("Not found");
     error.status = 404;
     next(error);

@@ -1,0 +1,69 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "project_name": "A Random Quote Generator",
+            "description": "This project displays a randomly selected quote into a randomly selected background.",
+            "technologies": ["JavaScript", "HTML"],
+            "live_link": "https://joanpujol.github.io/A-Random-Quote-Generator/",
+            "github_link": "https://github.com/joanpujol/A-Random-Quote-Generator/",
+            "image_urls": ["/static/images/project1main.png", "/static/images/project1.png"]
+        },
+        {
+            "id": 1,
+            "project_name": "List Pagination and Filtering",
+            "description": "In this project, I enhanced the usability of a web page that is displaying way too much information all at once. To make it easier for the user to find information and read the page, I added to this project a popular web development technique known as 'pagination'.",
+            "technologies": ["JavaScript", "HTML"],
+            "live_link": "https://joanpujol.github.io/List-Pagination-and-Filtering/",
+            "github_link": "https://github.com/joanpujol/List-Pagination-and-Filtering/",
+            "image_urls": ["/static/images/project2main.png", "/static/images/project2.png"]
+        },
+        {
+            "id": 2,
+            "project_name": "Interactive Form",
+            "description": "In this project, I used JavaScript to enhance an interactive registration form for a fictional conference called 'FullStack Conf.'",
+            "technologies": ["JavaScript", "JQuery", "HTML", "CSS"],
+            "live_link": "https://joanpujol.github.io/Interactive-Form/",
+            "github_link": "https://github.com/joanpujol/Interactive-Form/",
+            "image_urls": ["/static/images/project3main.png", "/static/images/project3.png"]
+        },
+        {
+            "id": 3,
+            "project_name": "OOP Game Show App",
+            "description": "In this project, I created a browser-based, word guessing game: 'Phrase Hunter.' I used JavaScript and OOP (Object Oriented Programming) to select a random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard.",
+            "technologies": ["JavaScript", "OOP", "HTML", "CSS"],
+            "live_link": "https://joanpujol.github.io/OOP-Game-Show-App/",
+            "github_link": "https://github.com/joanpujol/OOP-Game-Show-App/",
+            "image_urls": ["/static/images/project4main.png", "/static/images/project4.png"]
+        },
+        {
+            "id": 4,
+            "project_name": "Public Api Requests",
+            "description": "For this project I use the Random User Generator API (https://randomuser.me/) to grab information for 12 random “employees”, and use that data to build a prototype for a fictional Startup employee directory.",
+            "technologies": ["JavaScript", "AJAX", "OOP", "HTML", "CSS"],
+            "live_link": "https://joanpujol.github.io/Public-API-Requests/",
+            "github_link": "https://github.com/joanpujol/Public-API-Requests/",
+            "image_urls": ["/static/images/project5main.png", "/static/images/project5.png"]
+        }
+    ],
+    "common": {
+        "pageTitle": "Juan Pujol Portfolio",
+        "profileImage": "/static/images/profile.png",
+        "profileName": "Juan Pujol",
+        "profileDescription": "Full Stack Developer (JavaScript, Python, Mongo)."
+    },
+    "index": {
+        "title": "Hey you, welcome to my portfolio!",
+        "description": "This portfolio is a marketing document meant to demonstrate my myriad skills, including, but not limited to: web development, soft skills, lifelong learning, technical prowess, and the ability to use the word 'myriad'."
+    },
+    "about": {
+        "title": "Full Stack Developer (JavaScript, Python, Mongo).",
+        "bio": "I'm constantly working on projects which involve integrating to a large variety of technologies such as Vue.js, Django, Python Falcon APIs, Kafka, relational databases such as PostgreSQL and NoSQL databases such as Mongo or Redis. I strongly believe that communication is the key to success over any kind of project. I love giving feedback when useful and showing transparency over the progress achieved.",
+        "skills": ["Python", "JavaScript", "Vue.js", "Django", "Node", "Express", "Pug", "AJAX", "Mongo", "JQuery"],
+        "email": "joangalilea@gmail.com",
+        "number": "666-66-66-66",
+        "linkedInURL": "https://www.linkedin.com/in/joan-pujol-b604aaa0/",
+        "githubURL": "https://github.com/joanpujol",
+        "twitterURL": "https://twitter.com/jnpujol?lang=en"
+    }
+}

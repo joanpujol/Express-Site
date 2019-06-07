@@ -4,7 +4,8 @@
   "description": "This is a portfolio site to showcase some projects I've built from the Treehouse JavaScript Techdegree.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

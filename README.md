@@ -2,6 +2,8 @@
 
 ![alt text](https://gdurl.com/aBds)
 
+ ## Description ##
+
 This is a portfolio site to showcase some projects I've built from the Treehouse JavaScript Techdegree.
 
 The site contains a modern landing page, an about page where I talk a little about myself and how to contact me, and a series of project pages to show off and detail the first five projects from the Treehouse Techdegree.
@@ -18,6 +20,17 @@ I've used Node.js and Express to:
 - Set up the middleware to utilize static files like CSS
 - Handle errors
 - Set up a server to serve the project
+
+ ## Access Locally ##
+
+```bash
+    git clone https://github.com/joanpujol/Express-Site.git
+    cd Express-Site/
+    npm install
+    npm start
+ ```
+
+ ## About Style Changes ##
 
 The changes I've made to the design are the following:
 - font-family for main content is now Roboto

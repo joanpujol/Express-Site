@@ -34,7 +34,7 @@ app.get('/about', function (req, res, next) {
 
 // Project page
 app.get('/project/:id', function (req, res, next) {
-    const id = parseInt(req.params.id);
+    const id = req.params.id;
 
     // Added validation to check if requested project exists
     const projectIds = getProjectIds(data.projects);
@@ -79,7 +79,7 @@ app.use((error, req, res, next) => {
 // * * * Helper functions * * *
 const getProjectIds = (projects) => {
     // Credit to Flavio (flaviocopes.com) for the following gem:
-    return [...new Set(projects.map(project => project.id))]
+    return [...new Set(projects.map(project => project.id.toString()))]
 }
 
 const raiseNotFoundError = (nextFunc) => {

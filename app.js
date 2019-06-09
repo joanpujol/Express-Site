@@ -34,13 +34,21 @@ app.get('/about', function (req, res, next) {
 
 // Project page
 app.get('/project/:id', function (req, res, next) {
-    // Based on the parameter passed, gets a project
-    let project = data.projects[req.params.id];
-    const context = Object.assign({
-        project
-    }, common);
-    
-    res.render("project", context);
+    const id = parseInt(req.params.id);
+
+    // Added validation to check if requested project exists
+    const projectIds = getProjectIds(data.projects);
+    if(!projectIds.includes(id)) {
+        raiseNotFoundError(next);
+    } else {
+        // Based on the parameter passed, gets a project
+        let project = data.projects[id];
+        const context = Object.assign({
+            project
+        }, common);
+
+        res.render("project", context);
+    }
 });
 
 
@@ -56,20 +64,30 @@ app.use((req, res, next) => {
 
 // Every other page
 app.use((req, res, next) => {
-    // Creates an error with status 404 if the page wasn't found
-    console.error(`The following page has not been found: ${req.url}`);
-    const error = new Error("Not found");
-    error.status = 404;
-    next(error);
+    raiseNotFoundError(next);
 });
 
 // Error handling middleware
 app.use((error, req, res, next) => {
+    console.error(`The following page has not been found: ${req.url}`);
     const context = Object.assign({
         error
     }, common);
     res.render("error", context);
 });
+
+// * * * Helper functions * * *
+const getProjectIds = (projects) => {
+    // Credit to Flavio (flaviocopes.com) for the following gem:
+    return [...new Set(projects.map(project => project.id))]
+}
+
+const raiseNotFoundError = (nextFunc) => {
+    // Creates an error with status 404 if the page wasn't found
+    const error = new Error("Not found");
+    error.status = 404;
+    nextFunc(error);
+}
 
 // Run npm start to serve the app on port 3000
 app.listen(3000);
